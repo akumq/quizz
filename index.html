@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz BI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz BI</h1>
+        </header>
+        
+        <div id="start-screen" class="screen">
+            <h2>Bienvenue au Quiz BI</h2>
+            <p>Ce quiz contient 20 questions aléatoires (parmi 40) à choix multiples sur la Business Intelligence.</p>
+            <div class="rules">
+                <h3>Règles du jeu</h3>
+                <ul>
+                    <li>Chaque bonne réponse vaut 100 points maximum</li>
+                    <li>Certaines questions ont <strong>plusieurs bonnes réponses</strong> à cocher</li>
+                    <li>À chaque erreur, vous perdez 25 points sur la question</li>
+                    <li>Une erreur = choisir une mauvaise réponse ou manquer une bonne réponse</li>
+                    <li>Réfléchissez bien avant de continuer pour maximiser votre score!</li>
+                </ul>
+            </div>
+            <button id="start-button" class="btn">Commencer le Quiz</button>
+        </div>
+        
+        <div id="quiz-screen" class="screen hidden">
+            <div id="quiz-header">
+                <div id="progress">Question <span id="current-question">1</span>/<span id="total-questions">0</span></div>
+                <div id="timer">Temps: <span id="time">00:00</span></div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question-text">Question ici...</h2>
+                <div id="answers-container"></div>
+            </div>
+            
+            <div id="controls">
+                <button id="next-button" class="btn">Question Suivante</button>
+            </div>
+        </div>
+        
+        <div id="results-screen" class="screen hidden">
+            <h2>Résultats</h2>
+            <div id="score-container">
+                <p>Votre score: <span id="score">0</span>/<span id="max-score">0</span></p>
+                <p>Pourcentage: <span id="percentage">0</span>%</p>
+            </div>
+            <div id="results-details"></div>
+            <button id="restart-button" class="btn">Recommencer</button>
+        </div>
+    </div>
+    
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
